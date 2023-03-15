@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
     }
     res.json(info);
   });
-  res.send(req.cookies);
 });
 
 export default router;

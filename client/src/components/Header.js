@@ -6,7 +6,9 @@ const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
   useEffect(() => {
     async function getCookies() {
-      const req = await fetch('/profile', { credentials: 'include' });
+      const req = await fetch('/profile', {
+        credentials: 'include',
+      });
       const res = await req.json();
       setUserInfo(res);
     }
@@ -26,11 +28,12 @@ const Header = () => {
   return (
     <header>
       <Link to='/' className='logo'>
-        MyBlog
+        MBlog
       </Link>
       <nav>
         {userInfo?.username ? (
           <>
+            {/* <span>Hello, {userInfo?.username}</span> */}
             <Link to='/create'>Create new post</Link>
             <Link to='/' onClick={Logout}>
               Logout

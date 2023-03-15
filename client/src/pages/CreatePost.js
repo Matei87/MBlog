@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import Editor from '../components/Editor';
 
 const CreatePost = () => {
   const [title, setTitle] = useState('');
@@ -9,34 +8,6 @@ const CreatePost = () => {
   const [content, setContent] = useState('');
   const [file, setFile] = useState('');
   const [redirect, setRedirect] = useState(false);
-
-  const modules = {
-    toolbar: [
-      [{ header: [1, 2, false] }],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-      [
-        { list: 'ordered' },
-        { list: 'bullet' },
-        { indent: '-1' },
-        { indent: '+1' },
-      ],
-      ['link', 'image'],
-      ['clean'],
-    ],
-  };
-  const formats = [
-    'header',
-    'bold',
-    'italic',
-    'underline',
-    'strike',
-    'blockquote',
-    'list',
-    'bullet',
-    'indent',
-    'link',
-    'image',
-  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,13 +54,7 @@ const CreatePost = () => {
           accept='.png, .jpeg, .jpg'
           onChange={(e) => setFile(e.target.files)}
         />
-        <ReactQuill
-          theme='snow'
-          value={content}
-          modules={modules}
-          formats={formats}
-          onChange={setContent}
-        />
+        <Editor content={content} onChange={setContent} />
         <button type='submit' style={{ marginTop: '5px' }}>
           Create post
         </button>

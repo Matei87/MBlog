@@ -14,7 +14,9 @@ const Login = () => {
     const request = await fetch('/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+      },
       credentials: 'include',
     });
     if (request.status === 200) {
