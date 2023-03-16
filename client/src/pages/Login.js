@@ -28,7 +28,7 @@ const Login = () => {
       console.log(`${request.status} ${request.statusText}`);
     }
   };
-  console.log('Login ', { username, password });
+
   if (redirect) {
     return <Navigate to='/' />;
   }

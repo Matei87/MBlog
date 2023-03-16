@@ -15,7 +15,6 @@ const EditPost = () => {
       try {
         const request = await fetch(`/post/${id}`);
         const response = await request.json();
-        console.log(response);
         setTitle(response.title);
         setSummary(response.summary);
         setContent(response.content);
@@ -36,7 +35,6 @@ const EditPost = () => {
     if (file?.[0]) {
       data.set('file', file?.[0]);
     }
-    console.log('data ', data, file[0]);
     const req = await fetch(`/post`, {
       method: 'PUT',
       body: data,

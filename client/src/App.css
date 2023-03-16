@@ -7,17 +7,20 @@ main {
 
 /* HEADER */
 header {
+  background: #8e8e8e;
+  color: #fff;
+  height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
-  margin-top: 20px;
 }
 header a {
   color: inherit;
 }
 header a.logo {
-  font-weight: bold;
+  font-weight: 500;
+  color: #000;
   font-size: 1.5rem;
 }
 header nav {
@@ -37,15 +40,6 @@ div.post {
     grid-template-columns: 0.9fr 1.1fr;
   }
 }
-/* div.post div.image {
-  width: 15rem;
-  height: 15rem;
-}
-div.post div.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 div.post div.texts h2 {
   margin: 0;
   font-size: 1.8rem;
@@ -109,17 +103,13 @@ div.post-page h1 {
   margin: 10px 0 5px;
 }
 div.post-page div.image {
-  /* width: 100%;
-  height: 17rem; */
   display: flex;
   max-height: 200px;
   overflow: hidden;
 }
 div.post-page div.image img {
-  /* width: 100%;
-  height: 100%; */
   object-fit: cover;
-  object-position: center center;
+  object-position: 50% 20%;
   width: 100%;
 }
 div.post-page a {
@@ -137,6 +127,9 @@ div.post-page div.author {
   margin-bottom: 20px;
   font-size: 0.7rem;
   font-weight: 700;
+}
+div.post-page div.content {
+  margin-top: 20px;
 }
 div.post-page div.content p {
   line-height: 1.6rem;
@@ -157,4 +150,20 @@ div.post-page a.edit-btn {
 }
 a svg {
   height: 20px;
+}
+
+/* FOOTER */
+footer {
+  height: 70px;
+  background: #8e8e8e;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  color: #fff;
+}
+footer p {
+  margin: 0;
+  color: #000;
 }

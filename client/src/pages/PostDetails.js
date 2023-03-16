@@ -29,7 +29,7 @@ const PostDetails = () => {
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
-  console.log(isLoading, postInfo, Object.keys(postInfo).includes('author'));
+
   return (
     <div className='post-page'>
       <h1>{postInfo.title}</h1>

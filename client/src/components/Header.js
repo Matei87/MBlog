@@ -24,11 +24,10 @@ const Header = () => {
     if (res === 'ok') setUserInfo(null);
   };
 
-  //console.log('header ', userInfo);
   return (
     <header>
       <Link to='/' className='logo'>
-        MBlog
+        mBlog
       </Link>
       <nav>
         {userInfo?.username ? (

@@ -17,7 +17,6 @@ router.post('/', async (req, res) => {
         process.env.SECRET,
         {},
         (err, token) => {
-          console.log(err, token);
           if (err) {
             throw err;
           }
@@ -28,7 +27,6 @@ router.post('/', async (req, res) => {
       res.status(401).json('Wrong credentials !');
     }
   } catch (error) {
-    console.log(error);
     res.status(400).json(error);
   }
 });

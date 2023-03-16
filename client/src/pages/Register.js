@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [isRegistered, setIsRegistered] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,14 +14,16 @@ const Register = () => {
       headers: { 'Content-Type': 'application/json' },
     });
     if (request.status === 201) {
-      console.log('registration succeded !!!');
+      setIsRegistered(true);
     } else {
       console.error(`${request.status} ${request.statusText}`);
     }
-    console.log('form submit ', JSON.stringify({ username, password }));
   };
 
-  console.log({ username, password });
+  if (isRegistered) {
+    return <Navigate to='/login' />;
+  }
+
   return (
     <div className='register'>
       <h1>Register</h1>

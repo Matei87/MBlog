@@ -17,7 +17,6 @@ const Homepage = () => {
     getPosts();
   }, []);
 
-  console.log(posts);
   return (
     <>
       {posts.length > 0 &&
