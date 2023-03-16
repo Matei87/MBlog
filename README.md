@@ -1,6 +1,6 @@
-# MBlog
+# mBlog
 
-MBlog is a MERN blog with register, login, edit options where you can share latest thoughts.
+mBlog is a MERN blog with register, login, edit options where you can share latest thoughts.
 
 # Built With
 
