@@ -16,7 +16,7 @@ const CreatePost = () => {
     data.set('summary', summary);
     data.set('content', content);
     data.set('file', file[0]);
-    const req = await fetch('/post', {
+    const req = await fetch('/api/post', {
       method: 'POST',
       body: data,
       credentials: 'include',

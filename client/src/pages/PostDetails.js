@@ -12,7 +12,7 @@ const PostDetails = () => {
   useEffect(() => {
     const getPostById = async () => {
       try {
-        const request = await fetch(`/post/${id}`);
+        const request = await fetch(`/api/post/${id}`);
         const response = await request.json();
         setIsLoading(false);
         setPostInfo(response);

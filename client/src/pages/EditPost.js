@@ -13,7 +13,7 @@ const EditPost = () => {
   useEffect(() => {
     const getPostData = async () => {
       try {
-        const request = await fetch(`/post/${id}`);
+        const request = await fetch(`/api/post/${id}`);
         const response = await request.json();
         setTitle(response.title);
         setSummary(response.summary);
@@ -35,7 +35,7 @@ const EditPost = () => {
     if (file?.[0]) {
       data.set('file', file?.[0]);
     }
-    const req = await fetch(`/post`, {
+    const req = await fetch(`/api/post`, {
       method: 'PUT',
       body: data,
       credentials: 'include',

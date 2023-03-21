@@ -6,7 +6,7 @@ const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
   useEffect(() => {
     async function getCookies() {
-      const req = await fetch('/profile', {
+      const req = await fetch('/api/profile', {
         credentials: 'include',
       });
       const res = await req.json();
@@ -16,7 +16,7 @@ const Header = () => {
   }, [setUserInfo]);
 
   const Logout = async () => {
-    const req = await fetch('/logout', {
+    const req = await fetch('/api/logout', {
       credentials: 'include',
       method: 'POST',
     });

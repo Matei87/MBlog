@@ -7,7 +7,7 @@ const Homepage = () => {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const req = await fetch('/post');
+        const req = await fetch('/api/post');
         const res = await req.json();
         setPosts(res);
       } catch (error) {
