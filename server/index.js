@@ -30,11 +30,11 @@ app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 /* ROUTES */
-app.use('/register', registerRoute);
-app.use('/login', loginRoute);
-app.use('/profile', profileRoute);
-app.use('/logout', logoutRoute);
-app.use('/post', postRoute);
+app.use('/api/register', registerRoute);
+app.use('/api/login', loginRoute);
+app.use('/api/profile', profileRoute);
+app.use('/api/logout', logoutRoute);
+app.use('/api/post', postRoute);
 
 /* MONGODB */
 try {
